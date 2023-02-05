@@ -47,8 +47,8 @@ button:hover {
 
 
 img.user {
-    height: 30%;
-  width: 30%;
+    height: 15%;
+  width: 15%;
   border-radius: 50%;
 }
 
@@ -62,4 +62,7 @@ img.user {
 
   .cancelbtn {
     width: 100%;
+  }
+  body{
+      background-color:  navy;
   }
