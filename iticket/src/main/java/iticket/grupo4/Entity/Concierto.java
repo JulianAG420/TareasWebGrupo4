@@ -2,12 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.iticket.demo.Entity;
+package iticket.grupo4.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.io.Serializable;
 
@@ -17,7 +19,7 @@ import java.io.Serializable;
  */
 
 @Entity
-@Table (name="concierto")
+@Table (name="Concierto")
 public class Concierto implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +30,9 @@ public class Concierto implements Serializable {
     private int capacidad;
     private String lugar;
     
-    
+    @ManyToOne
+    @JoinColumn(name="concierto_id")
+    private Concierto concierto;
 
     public long getId() {
         return id;
@@ -78,7 +82,19 @@ public class Concierto implements Serializable {
         this.lugar = lugar;
     }
 
- 
+    public Concierto getConcierto() {
+        return concierto;
+    }
+
+    public void setConcierto(Concierto concierto) {
+        this.concierto = concierto;
+    }
+
+  
+
+    public void setPais(Concierto concierto) {
+        this.concierto = concierto;
+    }
     
     
     

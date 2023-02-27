@@ -2,11 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.iticket.demo.Service;
+package iticket.grupo4.Service;
 
 
-import com.iticket.demo.Entity.Concierto;
-
+import iticket.grupo4.Entity.Concierto;
 import java.util.List;
 
 /**
